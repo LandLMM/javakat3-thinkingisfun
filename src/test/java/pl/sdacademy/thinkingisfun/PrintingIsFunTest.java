@@ -54,7 +54,6 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
-        orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
     }
 
     @Test
