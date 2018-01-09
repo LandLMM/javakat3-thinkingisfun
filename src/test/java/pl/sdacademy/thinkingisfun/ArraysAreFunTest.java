@@ -29,7 +29,7 @@ public class ArraysAreFunTest {
     public void shouldMergeTwoArraysWithDuplicates() {
         Integer[] first = {1,4,5,7};
         Integer[] second = {4,5,6,7};
-        Integer[] expectedResult = {1,4,4,5,5,6,7};
+        Integer[] expectedResult = {1,4,4,5,5,6,7,7};
 
         Integer[] result = fun.merge(first, second);
 
@@ -61,7 +61,7 @@ public class ArraysAreFunTest {
     @Test
     public void shouldReverseOddLengthArray() {
         Integer[] array = {3,7,2,4,1};
-        Integer[] expectedResult = {1,4,2,7,4};
+        Integer[] expectedResult = {1,4,2,7,3};
 
         Integer[] result = fun.reverse(array);
 
@@ -123,7 +123,7 @@ public class ArraysAreFunTest {
         Integer[] array = {5,6,2,3,9,8,1};
         Integer[] expectedResult = {5,6,2,3,9,8,1};
 
-        Integer[] result = fun.roll(array, 3);
+        Integer[] result = fun.roll(array, array.length);
 
         assertArrayEquals(expectedResult, result);
     }
