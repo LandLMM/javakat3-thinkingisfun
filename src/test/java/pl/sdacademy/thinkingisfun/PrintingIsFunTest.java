@@ -11,8 +11,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.inOrder;
+import static org.mockito.Mockito.never;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PrintingIsFunTest {
@@ -33,6 +35,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("***" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("***" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("***" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -43,6 +46,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("******" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("******" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("******" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -54,6 +58,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -67,6 +72,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("*  *" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("*  *" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("****" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -77,6 +83,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("*******" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("*     *" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("*******" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -85,6 +92,7 @@ public class PrintingIsFunTest {
 
         InOrder orderVerifier = inOrder(output);
         orderVerifier.verify(output).write(eq(("*" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -95,6 +103,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("***" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("**" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("*" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -110,6 +119,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("***" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("**" + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("*" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -118,6 +128,7 @@ public class PrintingIsFunTest {
 
         InOrder orderVerifier = inOrder(output);
         orderVerifier.verify(output).write(eq(("*" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -129,6 +140,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("  ***  " + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq((" ***** " + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("*******" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -142,6 +154,7 @@ public class PrintingIsFunTest {
         orderVerifier.verify(output).write(eq(("  *******  " + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq((" ********* " + System.lineSeparator()).getBytes()));
         orderVerifier.verify(output).write(eq(("***********" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
     @Test
@@ -150,6 +163,7 @@ public class PrintingIsFunTest {
 
         InOrder orderVerifier = inOrder(output);
         orderVerifier.verify(output).write(eq(("*" + System.lineSeparator()).getBytes()));
+        orderVerifier.verify(output, never()).write(any());
     }
 
 }
