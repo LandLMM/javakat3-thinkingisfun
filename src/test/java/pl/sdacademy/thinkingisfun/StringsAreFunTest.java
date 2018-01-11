@@ -68,7 +68,7 @@ public class StringsAreFunTest {
 
         Integer countedOccurrences = fun.countOccurences(baseTextThatWillBeAnalyzed, textThatWillBeCounted);
 
-        assertEquals((Integer) 3, countedOccurrences);
+        assertEquals((Integer) 0, countedOccurrences);
     }
 
     @Test
