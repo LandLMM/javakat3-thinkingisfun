@@ -54,3 +54,14 @@ W podanych metodach musi zostać wytworzona nowa tablica, która będzie zawiera
     * rot13 - metoda koduje/dekoduje tekst za pomocą algorytmu ROT13 - jest to algorytm, który zamienia każdą literę alfabetu na literę o 13 znaków dalej (a->n; b->o; c->p; q->d; r->e; s->f). Przydatna tutaj będzie znajomość budowy Tablicy kodów ASCII (zawiera informacje o kodach znaków, czyli jaki numer ma która litera). Działanie ROT13 można sprawdzić na stronie rot13.com. Przykład:  
       ```Kiedys wystarczal Szyfr Cezara```  
       ```Xvrqlf jlfgnepmny Fmlse Prmnen```
+
+
+#Thinking is fun V2!
+Nowe zadania!
+ 
+1. ArraysAreFun!
+Napisz metody tak, aby testy przechodziły
+    * Integer[] removeElementAtPosition(Integer[] array, Integer positionNumber) - usuwa element o podanym indeksie z tablicy
+    * List convertToList(int[] ints) - przekształca tablicę intów w ich Listę
+2. CollectionsAreFun!
+Tym razem metody są napisane! Uzupełnij metody testujące tak, aby sprawdzały wielkość zwróconej kolekcji oraz sprawdzały, czy wszystkie elementy są w niej zawarte w odpowiedniej kolejności. Ćwiczenie pozwoli Wam na utrwalenie różnic między różnymi implementacjami kolekcji.

@@ -3,6 +3,11 @@ package pl.sdacademy.thinkingisfun;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.TreeSet;
+
 import static org.junit.Assert.*;
 
 public class ArraysAreFunTest {
@@ -176,6 +181,64 @@ public class ArraysAreFunTest {
         Integer[] result = fun.longestGrowingTrent(array);
 
         assertArrayEquals(expectedResult, result);
+    }
+
+    @Test
+    public void shouldRemoveElementFromArrayFront() {
+        Integer[] array = {3, 6, 7, 9, 58, 19};
+        Integer[] expectedResult = {6, 7, 9, 58, 19};
+
+        Integer[] result = fun.removeElementAtPosition(array, 0);
+
+        assertArrayEquals(expectedResult, result);
+    }
+
+    @Test
+    public void shouldRemoveElementFromArrayMiddle() {
+        Integer[] array = {3, 6, 7, 9, 58, 19};
+        Integer[] expectedResult = {3, 6, 9, 58, 19};
+
+        Integer[] result = fun.removeElementAtPosition(array, 2);
+
+        assertArrayEquals(expectedResult, result);
+    }
+
+    @Test
+    public void shouldRemoveElementFromArrayEnd() {
+        Integer[] array = {3, 6, 7, 9, 58, 19};
+        Integer[] expectedResult = {3, 6, 7, 9, 58};
+
+        Integer[] result = fun.removeElementAtPosition(array, 5);
+
+        assertArrayEquals(expectedResult, result);
+    }
+
+    @Test
+    public void shouldRemoveLastElementFromArray() {
+        Integer[] array = {1337};
+        Integer[] expectedResult = {};
+
+        Integer[] result = fun.removeElementAtPosition(array, 0);
+
+        assertArrayEquals(expectedResult, result);
+    }
+
+    @Test
+    public void shouldConvertArrayWithOneElement() {
+        int[] integerArray = {1};
+
+        List convertedList = fun.convertToList(integerArray);
+
+        assertEquals(integerArray.length, convertedList.size());
+    }
+
+    @Test
+    public void shouldConvertArrayWithMultipleElements() {
+        int[] integerArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        List convertedList = fun.convertToList(integerArray);
+
+        assertEquals(integerArray.length, convertedList.size());
     }
 
 }
