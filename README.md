@@ -65,3 +65,16 @@ Napisz metody tak, aby testy przechodziły
     * List convertToList(int[] ints) - przekształca tablicę intów w ich Listę
 2. CollectionsAreFun!
 Tym razem metody są napisane! Uzupełnij metody testujące tak, aby sprawdzały wielkość zwróconej kolekcji oraz sprawdzały, czy wszystkie elementy są w niej zawarte w odpowiedniej kolejności. Ćwiczenie pozwoli Wam na utrwalenie różnic między różnymi implementacjami kolekcji.
+
+
+#Thinking with tests are fun!
+Zadania z podstawa testów jednostkowch.
+1. CalculatorTest
+    Napisz po 3 metody testujące poprawność kalkulatora. Klasa nie wymaga mockowania, a jedynie pisania prostych asercji.
+2. ProxyForNumberTest  
+    Zaimplementuj metodę testującą dla każdej z metod w klasie. Klasa odpytuje serwis NumberProvider o kolejny numer. Waszym zadaniem jest zmockowanie zwracanej wartości i sprawdzenie, czy ta zmockowana wartość została zwrócona z service.
+3. CalculatorForProxy  
+    Klasa wykorzystuje znane już metody kalkulatora oraz znany intergace dla pobierania wartości. Należy zmockować zwracane przez NumberProvider i sprawdzić, czy została na nich wykonana operacja.
+4. DatabaseInformationServiceTest  
+    Klasa używa sztucznego obiektu połączenie do bazy w celu symulowania połączenia. Waszym zadaniem jest zaimplementowanie brakujących metod testujących. Wymagane jest mockowanie zwracanych przez bazę danych, oraz używanie konstrukcji verify.
+    
